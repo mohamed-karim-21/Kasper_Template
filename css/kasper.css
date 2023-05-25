@@ -10,7 +10,7 @@
     /* --main-color: #15c8fa; */
     --main-color: 21, 200, 250;
     --text-main-color: #fff;
-    --second-color: #333;
+    --second-color: #222;
     --section-back-color: #ffffff;
     --gray-color: #777777;
     --section-padding: 4rem;
@@ -18,7 +18,16 @@
 
 .container {
     width: 90vw;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 100vw;
+        margin: 0;
+        padding: 0 1vw;
+    }
 }
 
 @media (max-width: 576px) {
@@ -259,3 +268,103 @@ header .slides span:nth-child(2) {
 }
 
 /* END HEADER PART */
+
+/* Start General sections styles */
+.section {
+    padding: 5rem 0;
+}
+
+.section .section-header {
+    width: 32rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.section h2 {
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section h2::before {
+    content: '';
+    width: 80%;
+    height: 2px;
+    background-color: var(--second-color);
+    position: absolute;
+    bottom: -1rem;
+    left: 10%;
+}
+
+.section h2::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    position: absolute;
+    bottom: calc(-1rem - 12px / 2);
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 50%;
+    border: 2px solid var(--second-color);
+}
+
+.section .section-header > p {
+    color: var(--gray-color);
+    text-align: center;
+}
+/* End General sections styles */
+
+/* Start Services Part Styles */
+.services .services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem
+}
+
+@media (max-width: 992px) {
+    .services .services-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services .service {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .services .service {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width:720px) {
+    .services .service {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.services .service-content {
+    margin-top: -.4rem;
+}
+
+.services .service-content h3{
+    color: rgb(var(--main-color));
+    margin: 0;
+}
+
+.services .service-content p {
+    color: var(--gray-color);
+}
+/* End Services Part Styles */
