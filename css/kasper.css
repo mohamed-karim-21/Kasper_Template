@@ -7,8 +7,81 @@
 
 :root {
     --main-color: #15C8FA;
+    --text-main-color: #fff;
     --second-color: #333;
     --section-back-color: #ffffff;
     --gray-color: #777777;
     --section-padding: 4rem;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+
+header {
+    height: 100vw;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .7)), url("./../imgs/landing.jpeg");
+    background-size: cover;
+}
+
+
+header .top-bar {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+header nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    text-transform: capitalize;
+}
+
+header nav ul li a {
+    display: inline-block;
+    padding: 0 1rem;
+    line-height: 5rem;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-main-color);
+    transition: .3s ease all;
+}
+
+header nav ul li a:hover {
+    color: var(--main-color);
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: -1px;
+}
+
+header .search-icon {
+    padding: 1rem 0;
+    margin-left: 3rem;
+    position: relative;
+    color: var(--text-main-color);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+header .search-icon::before {
+    content: '';
+    width: 1px;
+    height: 60%;
+    background-color: var(--text-main-color);
+    position: absolute;
+    left: -1.5rem;
+    top: 20%;
 }
