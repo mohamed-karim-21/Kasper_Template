@@ -16,10 +16,19 @@
     --section-padding: 4rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 90vw;
-    max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (min-width: 1300px) {
+    .container {
+        width: 80vw;
+    }
 }
 
 @media (max-width: 992px) {
@@ -220,6 +229,12 @@ header .intro {
     transform: translateY(-50%);
 }
 
+@media (min-width: 1300px) {
+    header .intro {
+        padding-left: 10vw;
+    }
+}
+
 header .intro .content {
     padding: 3rem;
 }
@@ -368,3 +383,73 @@ header .slides span:nth-child(2) {
     color: var(--gray-color);
 }
 /* End Services Part Styles */
+
+/* Start Features Part Styles */
+.features {
+    background: linear-gradient(to right, rgb(0 0 0 / .6), rgb(0 0 0 / .1), rgb(0 0 0 / .6)), url("./../imgs/design-features.jpeg");
+    padding: 5rem 0;
+    position: relative;
+    height: 34rem;
+    overflow: hidden;
+}
+
+.features .mobile {
+    position: absolute;
+    left: 5vw;
+    bottom: -20%;
+}
+
+@media (min-width: 1300px) {
+    .features .mobile {
+        left: 10vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .features .mobile {
+        display: none;
+    }
+}
+
+.features .design-feats {
+    color: var(--text-main-color);
+    background-color: rgba(var(--main-color), .4);
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 3rem 4rem;
+}
+
+@media (max-width: 992px) {
+    .features .design-feats {
+        width: 100%;
+    }
+}
+
+.features .design-feats h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.features .feat span {
+    margin-left: 1rem;
+}
+
+.features .feat:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.features .feat a {
+    text-decoration: none;
+    color: var(--text-main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* End Features Part Styles */
