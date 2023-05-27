@@ -1342,6 +1342,11 @@ footer {
     position: relative;
 }
 
+footer .container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
 footer .content {
     display: flex;
     flex-direction: column;
@@ -1371,7 +1376,7 @@ footer .content .social-media {
     gap: 1rem;
 }
 
-.outro {
+footer .outro {
     position: absolute;
     bottom: 0;
     background-color: rgb(var(--main-color));
@@ -1383,12 +1388,12 @@ footer .content .social-media {
     letter-spacing: 1px;
 }
 
-.outro a {
+footer .outro a {
     text-decoration: none;
 }
 
-.outro a,
-.outro span {
+footer .outro a,
+footer .outro span {
     color: var(--second-color);
     border-bottom: 2px solid var(--text-main-color);
 }
