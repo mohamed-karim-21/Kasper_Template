@@ -1027,5 +1027,103 @@ header .slides span:nth-child(2) {
     opacity: .7;
 }
 
-
 /* END QUOTE PART */
+
+/* START PRICING PART */
+
+.pricing .prices {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1280px) {
+    .pricing .prices {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing .prices {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pricing .prices .price-path {
+    background-color: #fdfafa;
+    border: 1px solid;
+    border-color: rgb(var(--main-color)) transparent;
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pricing .path-info {
+    border-bottom: 1px solid rgb(var(--main-color));
+    padding-bottom: 1rem;
+}
+
+.pricing .price-path .path-info .path-name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.pricing .path-info .price-montant {
+    font-weight: bold;
+    margin-top: -.5rem;
+}
+
+.pricing .path-feats {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+.pricing .path-feats p {
+    font-weight: 600;
+    width: fit-content;
+    border-bottom: 1px solid rgb(var(--main-color));
+    position: relative;
+}
+
+.pricing .path-feats p::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: rgb(var(--main-color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease all;
+}
+
+.pricing .path-feats p:hover::before {
+    width: 100%;
+}
+
+.pricing .path-feats p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.pricing .path-buy {
+    border-top: 1px solid rgba(var(--main-color));
+    padding: 2rem 0 1rem;
+}
+
+.pricing .path-buy a {
+    text-decoration: none;
+    border: 2px solid rgb(var(--main-color));
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    color: var(--second-color);
+    cursor: pointer;
+}
+
+/* END PRICING PART */
