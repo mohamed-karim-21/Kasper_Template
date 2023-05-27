@@ -988,6 +988,44 @@ header .slides span:nth-child(2) {
     left: 50%;
 }
 
-
 /* END SKILL AND TESTIMONIALS PART */
 
+/* START QUOTE PART */
+.quote {
+    min-height: 20rem;
+    background: linear-gradient(0deg , rgb(0 0 0 / .8) , rgb(0 0 0 / .8)), url("./../imgs/quote.jpeg");
+}
+
+.quote .quote-content {
+    padding: 4rem;
+    color: var(--text-main-color);
+    text-align: center;
+    position: relative;
+}
+
+.quote .quote-content::before {
+    content: '';
+    width: 70%;
+    height: 1px;
+    background-color: var(--gray-color);
+    position: absolute;
+    bottom: 1rem;
+    left: 15%;
+}
+
+.quote .quote-content q {
+    font-size: 2rem;
+}
+
+.quote .quote-content  span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-style: italic;
+    position: absolute;
+    bottom: 1.2rem;
+    right: 15%;
+    opacity: .7;
+}
+
+
+/* END QUOTE PART */
