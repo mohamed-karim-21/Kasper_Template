@@ -172,6 +172,7 @@ header nav ul {
         height: 3px;
         background-color: var(--text-main-color);
         border-radius: 2px;
+        transition: .2s ease all;
     }
     
     header .drop-down span:not(:last-child) {
@@ -180,6 +181,29 @@ header nav ul {
 
     header nav ul {
         display: none;
+    }
+
+    header .drop-down:hover span:not(:nth-child(2)),
+    header:has(ul:hover) .drop-down span:not(:nth-child(2)) {
+        width: 0;
+    }
+
+    header .drop-down:hover span:nth-child(2),
+    header:has(ul:hover) .drop-down span:nth-child(2) {
+        transform: rotate(45deg);
+        width: 1.6rem;
+        position: relative;
+    }
+
+    header .drop-down:hover span:nth-child(2)::before,
+    header:has(ul:hover) .drop-down span:nth-child(2)::before {
+        content: '';
+        width: 1.6rem;
+        height: 3px;
+        background-color: var(--text-main-color);
+        position: absolute;
+        transform: rotate(90deg);
+        border-radius: 2px;
     }
     
     header .drop-down:hover + ul,
@@ -196,6 +220,7 @@ header nav ul {
         width: 100%;
         z-index: 2;
     }
+
 }
 
 header nav ul li {
