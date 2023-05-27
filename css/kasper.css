@@ -1172,8 +1172,7 @@ header .slides span:nth-child(2) {
 
 .newsletter form {
     padding: .5rem 0;
-    max-width: fit-content;
-    min-width: 20rem;
+    max-width: 30rem;
     background-color: rgb(255 255 255 / .2);
     border-radius: 10px;
     position: relative;
