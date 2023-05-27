@@ -712,9 +712,9 @@ header .slides span:nth-child(2) {
     text-align: center;
     padding: 2rem 0;
     color: var(--text-main-color);
-    background-color: rgba(var(--main-color), 1);
     position: absolute;
     bottom: 10%;
+    background-color: rgb(var(--main-color));
 }
 
 .about-us .img-content p {
