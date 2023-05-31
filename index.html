@@ -21,7 +21,7 @@
 </head>
 <body>
 
-    <div class="goto-top">
+    <div class="goto-top" id="goto-top">
         <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
     <!-- Start Header Part -->
@@ -531,6 +531,19 @@
         <p class="outro">made with &hearts; by <a href="https://github.com/skeet1" target="_blank">skeet</a> &copy; 2023 <span>kasper</span> all right reserved</p>
     </footer>
     <!-- END FOOTER SECTION -->
+
+    <script>
+        let gotoTop = document.getElementById("goto-top");
+
+        window.onscroll = function () {
+            if (window.scrollY > window.innerHeight)
+            {
+                gotoTop.style.display = "flex";
+            }
+            else
+                gotoTop.style.display = "none";
+        }
+    </script>
     
 </body>
 </html>

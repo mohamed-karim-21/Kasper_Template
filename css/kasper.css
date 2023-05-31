@@ -106,7 +106,7 @@ html {
 
 @media (max-width: 768px) {
     .goto-top {
-        display: none;
+        /* display: none; */
     }
 }
 
